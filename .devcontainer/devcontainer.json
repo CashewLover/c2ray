@@ -1,0 +1,7 @@
+{
+  "name": "c2ray",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": "."
+  }
+}
