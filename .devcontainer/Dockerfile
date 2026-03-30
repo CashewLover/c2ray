@@ -7,5 +7,6 @@ RUN apt-get update && apt-get install -y \
 
 COPY install.sh /app/install.sh
 RUN chmod +x /app/install.sh && /app/install.sh
+COPY config.json /etc/config.json
 
-CMD ["/usr/local/bin/xray"]
+CMD ["/usr/local/bin/xray", "-c", "/etc/config.json"]
