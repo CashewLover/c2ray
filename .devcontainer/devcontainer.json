@@ -9,6 +9,17 @@
       "version": "latest"
     }
   },
+  "postAttachCommand": {
+    "public": "gh codespace ports visibility 443:public -c $CODESPACE_NAME",
+    "xray": "sudo /usr/local/bin/xray -c /etc/config.json"
+  },
+  "portsAttributes": {
+    "443": {
+      "label": "xray",
+      "protocol": "http",
+      "onAutoForward": "silent"
+    }
+  },
   "forwardPorts": [
     443
   ]
